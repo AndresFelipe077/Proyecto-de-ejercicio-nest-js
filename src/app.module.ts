@@ -3,6 +3,8 @@ import { TaskModule } from './task/task.module';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersController } from './users/users.controller';
+import { Profile } from './users/profile.entity';
+import { PostModule } from './post/post.module';
 
 @Module({
   imports: [
@@ -17,7 +19,8 @@ import { UsersController } from './users/users.controller';
       synchronize: true
     }),
     TaskModule,
-    UsersModule],
+    UsersModule,
+    PostModule],
   controllers: [],
   providers: [],
 })
